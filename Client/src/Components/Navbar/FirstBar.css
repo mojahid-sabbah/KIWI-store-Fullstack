@@ -1,0 +1,134 @@
+body{
+    background-color:rgb(218, 218, 218);;
+}
+
+.Badge{
+    color:rgb(252, 251, 251);
+     padding: 8px;
+     border: #fff 1px dashed;
+    border-radius: 50%;
+}
+ 
+.firstbar .navbar {
+    background-color: #171c25;
+    --bs-navbar-padding-y: 0;
+}
+
+
+.firstbar .navbar-brand {
+    margin-right: 0; 
+    padding-bottom: 0;
+}
+
+.firstbar .logo {
+    height: 45px;
+}
+
+.location {
+    width: 120px;
+    max-height: 50px;
+}
+
+.location h6 {
+    font-size: 12px;
+    color: rgb(200, 198, 198);
+}
+
+.location h4 {
+    font-size: 15px;
+    line-height: 0.5px;
+}
+
+.main-locaion {
+    /*  padding: 8px; */
+    margin: 5px;
+}
+
+.main-locaion:hover {
+    border: 0.5px solid #fff;
+
+}
+
+.loc-icon {
+    color: #fff;
+    padding-top: 10px;
+    padding-right: 5px;
+
+}
+
+.input-group .form-control {
+    width: 300px;
+}
+
+.search-icon {
+    background-color: rgb(250, 190, 77);
+    color: black;
+    font-weight: 10px;
+}
+
+.form-control {
+    width: 900px;
+}
+
+.firstbar .container-fluid {
+    width: 190px;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.cata-list {
+    background: rgb(228, 225, 225);
+    color: #000;
+}
+
+.dropdown-item {
+    padding: 0 0 0 15px;
+    margin: 0;
+}
+
+.list-g-search {
+    max-height: 350px;
+    overflow-y: scroll;
+}
+
+.list-g-search a:hover {
+    background: rgb(150, 149, 149);
+    color: #fff;
+}
+
+.languagesel .dropdown ul label,
+p {
+    font-size: 15px;
+
+}
+
+.dropdown .dropdown-menu {
+    width: 300px;
+    padding: 15px;
+
+    right: 200px;
+
+}
+
+.languagesel span img {
+    width: 30px;
+
+}
+
+.languagesel .btn {
+    border: none;
+    background: none;
+    --bs-btn-padding-x: 0;
+    --bs-btn-padding-y: 0;
+    margin: 8px 20px 0 20px;
+}
+
+.Accountslist {
+    padding: 0 20px;
+}
+
+.location .Accountsh6,
+h4 {
+    color: #fff;
+}
+

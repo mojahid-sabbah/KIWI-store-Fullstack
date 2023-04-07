@@ -1,0 +1,132 @@
+
+/* 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errorList, setErrorList] = useState("");
+
+  const dispatch = useDispatch();
+  const { isFetching, error } = useSelector((state) => state.user);
+  const navigate = useNavigate();
+
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const user = { email, password };
+    try {
+      await dispatch(login(user));
+      localStorage.setItem("token", "myToken"); // set the token in local storage
+      navigate("/Home"); // navigate to home page on successful login
+    } catch (error) {
+      setErrorList(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+   */
+
+
+
+
+
+
+  
+
+/* import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { login } from "../redux/actions/userActions";
+import { useNavigate } from "react-router-dom";
+
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errorList, setErrorList] = useState("");
+
+  const dispatch = useDispatch();
+  const { isFetching, error } = useSelector((state) => state.user);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const user = { email, password };
+    try {
+      await dispatch(login(user));
+      localStorage.setItem("token", "myToken"); // set the token in local storage
+      navigate("/Home"); // navigate to home page on successful login
+    } catch (error) {
+      setErrorList(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+      <label htmlFor="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      {errorList && <p>{errorList}</p>}
+      <button type="submit">{loading ? "Loading..." : "Log in"}</button>
+      </form>
+      );
+    };
+    
+    export default Login;
+    */
+      
+        //   const [email, setEmail] = useState('')
+        //   const [password, setPassword] = useState('')
+        //   let [loading, setLoading] = useState(false)
+        //   let [errorList, seterrorList] = useState('')
+      
+        //   let [user, setUser] = useState({
+        //     email: '',
+        //     password: '',
+        //   })
+      
+      
+        //   let navigate = useNavigate();
+        //   let goToHome = (e) => {
+        //     let path = '/Home'
+        //     navigate(path)
+        //   }
+        //   const dispatch = useDispatch()
+        //   const { isFetching, error } = useSelector((state) => state.user)
+      
+        //   let SubmitFormData = async (e) => {
+        //     e.preventDefault();
+        //     let { data } = await axios.post("https://knowledge-saraha.herokuapp.com/users/signIn", user)
+        //     if (data.message == 'success') {
+        //       /*     loginData =true; */
+        //       localStorage.setItem('token', data.token)
+        //       setUserData()
+        //       goToHome();
+        //     } else {
+        //       seterrorList(data.message)
+        //     }
+        //     setLoading(true)
+        //   }
+        //   const handelLogin = (e) => {
+        //     e.preventDefault()
+        //     login(dispatch, { email, password })
+        //   }
