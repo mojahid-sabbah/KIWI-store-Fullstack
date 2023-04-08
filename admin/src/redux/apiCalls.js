@@ -60,7 +60,7 @@ export const updateProduct = async (id, product, dispatch) => {
 export const addProduct = async (product, dispatch) => {
   dispatch(addProductStart());
   try {
-    const res = await userRequest.post(`/addProduct`, product);//{product}
+    const res = await userRequest.post(`/addProduct`, product);
     console.log({"addpro": res.data})
     dispatch(addProductSuccess(res.data));
   } catch (err) {

@@ -20,43 +20,42 @@ import { useSelector } from "react-redux";
 function App() {
   const userType = useSelector((state) => state.user.userType);
   const isAdmin = userType === "admin";
-  
+
   return (
     <Router>
-      <Switch>
-        <Route path="/login">
-          <Login />
-        </Route>
-        {isAdmin && (
-          <>
-            <Topbar />
-            <div className="container">
-              <Sidebar />
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/users">
-                <UserList />
-              </Route>
-              <Route path="/user/:userId">
-                <User />
-              </Route>
-              <Route path="/newUser">
-                <NewUser />
-              </Route>
-              <Route path="/products">
-                <ProductList />
-              </Route>
-              <Route path="/product/:productId">
-                <Product />
-              </Route>
-              <Route path="/newproduct">
-                <NewProduct />
-              </Route>
-            </div>
-          </>
-        )}
-      </Switch>
+
+      <Route path="/login">
+        <Login />
+      </Route>
+      {isAdmin && (
+        <>
+          <Topbar />
+          <div className="container">
+            <Sidebar />
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/users">
+              <UserList />
+            </Route>
+            <Route path="/user/:userId">
+              <User />
+            </Route>
+            <Route path="/newUser">
+              <NewUser />
+            </Route>
+            <Route path="/products">
+              <ProductList />
+            </Route>
+            <Route path="/product/:productId">
+              <Product />
+            </Route>
+            <Route path="/newproduct">
+              <NewProduct />
+            </Route>
+          </div>
+        </>
+      )}
     </Router>
   );
 }

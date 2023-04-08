@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { login } from "../../redux/apiCalls";
 import { useDispatch, useSelector } from 'react-redux'
 //import { useNavigate } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+import { useHistory ,useNavigate } from 'react-router-dom';
 import { Link as A_link } from 'react-router-dom';
 import styled from 'styled-components'
 
@@ -84,8 +84,15 @@ const Login = () => {
   const dispatch = useDispatch();
   const { isFetching, error } = useSelector((state) => state.user);
   //const navigate = useNavigate(); 
-  const history = useHistory();
-
+ // const history = useHistory();
+  const navigate = useNavigate();
+ 
+  const goToHome = (e) => {
+    e.preventDefault();
+    console.log('hello')
+    let path = '/'
+    navigate(path)
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -97,7 +104,8 @@ const Login = () => {
       myToken = JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser.token;
       //await dispatch(login(user));
       localStorage.setItem("token", myToken); // set the token in local storage
-      history.push("/");
+     /*  history.push("/"); */
+     goToHome()
     } catch (error) {
       setErrorList(error.message);
     } finally {
